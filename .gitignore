@@ -1,0 +1,13 @@
+.venv
+build
+dist
+**/**/__pycache__
+.python-version
+.vscode
+*.c
+*.o
+*.cpython*
+**/**/*egg*
+*.ipynb*
+*.out*
+*.pytest*
