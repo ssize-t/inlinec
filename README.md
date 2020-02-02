@@ -26,8 +26,10 @@ print(Q_rsqrt(1.234))
 ```
 Inlinec supports gnu-specific c extensions, so you're likely to have reasonable success #includeing glibc headers.
 
+Inspired by [Pyxl](https://github.com/pyxl4/pyxl4)
+
 # How does this work?
-Python has a mechanism for creating custom codecs, which given an input token stream, produce an output token stream. Inlinec consumes the entire token stream, runs a fault-tolerant parser on it (parso), finds which function nodes are annotated with an `@inlinec` decorator, creates a `ctypes` wrapper for the content of the function, and replaces the function body with a call to the ctypes wrapper. The import for the wrapper is lifted to the top of the file. Once this transformation has been made, the source code is re-tokenized and the Python interpreter only sees the transformed source.
+Python has a mechanism for creating custom codecs, which given an input token stream, produce an output token stream. Inlinec consumes the entire token stream, runs a fault-tolerant parser on it ([parso](https://github.com/davidhalter/parso)), finds which function nodes are annotated with an `@inlinec` decorator, creates a `ctypes` wrapper for the content of the function, and replaces the function body with a call to the ctypes wrapper. The import for the wrapper is lifted to the top of the file. Once this transformation has been made, the source code is re-tokenized and the Python interpreter only sees the transformed source.
 So a function like this:
 ```python
 @inlinec
