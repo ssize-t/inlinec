@@ -7,6 +7,7 @@ setup(
     name="inlinec",
     version="0.0.1",
     packages=["inlinec", "inlinec.codec"],
+    download_url="https://github.com/georgek42/inlinec/archive/0.0.1.tar.gz",
     data_files=[(SITE_PACKAGES_PATH, ["inlinec.pth"])],
     install_requires=["parso", "pycparserext", "cffi"],
 )
