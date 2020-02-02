@@ -9,7 +9,7 @@ setup(
     packages=["inlinec", "inlinec.codec"],
     description="Effortlessly write inline C functions",
     author="George Kharchenko",
-    author_emaiil="kharchenko.george@gmail.com",
+    author_email="kharchenko.george@gmail.com",
     keywords=["C", "inline", "ffi", "ctypes", "pyxl"],
     download_url="https://github.com/georgek42/inlinec/archive/0.0.1.tar.gz",
     data_files=[(SITE_PACKAGES_PATH, ["inlinec.pth"])],
