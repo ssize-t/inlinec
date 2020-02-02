@@ -49,12 +49,13 @@ In theory, this allows inline c functions to be called with a one-time compilati
 
 # Limitations
 Note: This is just a proof of concept
-    * Passing pointers to C functions does not currently work (aside from strings)
-    * Shells out to `gcc -E` to preprocess the source code
-    * Compilation is not cached and takes a long time every run
-    * Compilation pollutes the current directory with .so, .o, .c files
-    * The source file is parsed multiple times unnecessarily
-    * Many more
+    
+* Passing pointers to C functions does not currently work (aside from strings)
+* Shells out to `gcc -E` to preprocess the source code
+* Compilation is not cached and takes a long time every run
+* Compilation pollutes the current directory with .so, .o, .c files
+* The source file is parsed multiple times unnecessarily
+* Many more
 
 
 # Installation
